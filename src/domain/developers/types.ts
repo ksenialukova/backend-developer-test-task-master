@@ -8,3 +8,7 @@ export interface IDeveloper {
 	email: string
 
 }
+
+export interface IRevenue {
+	revenue?: number
+}
