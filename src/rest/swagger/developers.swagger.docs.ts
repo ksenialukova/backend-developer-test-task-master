@@ -7,7 +7,7 @@ export const path: IApiPathArgs = {
 }
 
 export const getDevelopers: IApiOperationArgsBase = {
-	summary: "Get full list of developers (used by developers management dashboard and contracts management dashboard)",
+	summary: "Get full list of developers (used by contracts management dashboard)",
 	path: '/',
 	parameters: {
 	},
@@ -15,6 +15,19 @@ export const getDevelopers: IApiOperationArgsBase = {
 		200: {
 			description: 'Success',
 			type: 'array', model: 'DeveloperDto'
+		},
+	},
+}
+
+export const getDevelopersWithRevenues: IApiOperationArgsBase = {
+	summary: "Get full list of developers with their revenue by all complited contracts (used by developers management dashboard)",
+	path: '/completedRevenues',
+	parameters: {
+	},
+	responses: {
+		200: {
+			description: 'Success',
+			type: 'array', model: 'DeveloperWithRevenueDto'
 		},
 	},
 }
